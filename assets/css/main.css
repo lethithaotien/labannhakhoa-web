@@ -1,4 +1,4 @@
-/* LA BÀN NHA KHOA - giao diện mới: giữ màu logo (navy, vàng đồng, đỏ rượu), thêm xanh bạc hà dịu */
+/* LA BÀN NHA KHOA - giao diện chuẩn: giữ màu logo (navy, vàng đồng, đỏ rượu), thêm xanh bạc hà dịu */
 :root{
   --navy:#0F2537; --navy-light:#1B3B56;
   --gold:#B37D38; --gold-dark:#8F5F1E; --gold-light:#FDF8F0;
@@ -53,12 +53,12 @@ button:hover,.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
 
 /* Hero */
 .hero-wrapper{background:linear-gradient(135deg,#fff 0%,var(--mint) 100%);border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;padding-top:3.5rem;padding-bottom:3.5rem}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:2.5rem;align-items:center;padding-top:3.5rem;padding-bottom:3.5rem}
 .hero-badge{display:inline-block;background:var(--gold-light);color:var(--gold-dark);border:1px solid var(--gold);padding:5px 14px;border-radius:20px;font-size:.84rem;font-weight:600;margin-bottom:1.1rem}
 .hero-copy h1{font-size:2.6rem;font-weight:600;margin-bottom:1rem}
 .hero-copy p.lead{font-size:1.08rem;color:var(--text-muted);max-width:34rem}
 .cta-group{margin-top:1.8rem;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.cta-group .btn-main{padding:14px 28px;font-size:1.02rem}
+.cta-group .btn-main{padding:14px 24px;font-size:1rem}
 .cta-more{margin-top:1rem;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:.9rem;color:var(--text-muted)}
 .cta-more .btn{padding:6px 14px;font-size:.85rem;border-radius:20px}
 .hero-art svg{width:100%;max-width:340px;height:auto;display:block;margin:auto;filter:drop-shadow(0 18px 26px rgba(15,37,55,.18))}
@@ -140,33 +140,66 @@ footer{background:var(--navy);color:#E2E8F0;padding:3rem 2rem 2rem;margin-top:0}
 footer h3{color:#FFD166;font-size:1.05rem;margin-bottom:12px}
 footer a{color:#FFD166}
 footer .container{padding:0}
+.footer-cta{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.footer-cta .btn{padding:8px 16px;font-size:.88rem;border-radius:8px}
 
-/* Nút liên hệ nổi */
+/* Nút liên hệ nổi (Hiển thị cả Chat Zalo và Gọi điện thoại) */
 .sticky-cta{position:fixed;bottom:16px;right:16px;display:flex;flex-direction:column;gap:8px;z-index:999}
 .sticky-cta a{box-shadow:0 4px 14px rgba(0,0,0,.25);border-radius:30px;padding:10px 18px;font-size:.9rem}
 
-/* Điện thoại / máy tính bảng */
+/* Máy tính: giữ cả bong bóng Zalo và Gọi điện thoại, có viền trắng để nổi bật trên nền navy */
+@media(min-width:901px){
+  .sticky-cta a{box-shadow:0 0 0 3px #fff,0 6px 16px rgba(0,0,0,.28)}
+}
+
+/* Điện thoại / máy tính bảng: Hiện nút English nguyên chữ cạnh nút Menu trên cùng 1 hàng ngang */
 @media(max-width:900px){
   .main-nav{display:none}
-  .menu-m{display:block}
-  header{padding:.5rem 1rem}
-  .header-inner{gap:8px 12px}
-  .logo img{height:48px}
-  .topbar{padding:6px 1rem}
+  .topbar-inner span:last-child{display:none}
   .topbar-inner{justify-content:center;text-align:center}
+  .topbar{padding:6px 1rem}
+  header{padding:.4rem .65rem}
+  .header-inner{flex-wrap:nowrap;gap:6px;position:relative;justify-content:flex-start}
+  .logo{gap:7px;min-width:0;margin-right:auto}
+  .logo img{height:36px}
+  .logo-title{font-size:.92rem;white-space:nowrap;letter-spacing:-.2px}
+  .logo-subtitle{display:none}
+  .actions{display:flex;flex:none;margin-left:auto}
+  .actions .btn-secondary{display:none}
+  .actions .btn-outline{padding:7px 11px;font-size:.85rem;border-radius:8px;white-space:nowrap}
+  .menu-m{display:block;width:auto;flex:none}
+  .menu-m summary{padding:7px 12px;font-size:.85rem;border-radius:8px;white-space:nowrap}
+  .menu-m[open] summary{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .menu-m nav{position:absolute;left:0;right:0;top:calc(100% + 6px);display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(15,37,55,.18)}
+  .menu-m nav a{text-align:center;padding:11px 8px;border-radius:10px}
+  .menu-m nav a.menu-cta{grid-column:1/-1;background:var(--gold-dark);color:#fff;font-weight:600}
+  .menu-m nav a.menu-en{display:none}
+
   .container{padding:2.5rem 1rem}
-  .hero-grid{grid-template-columns:1fr;padding-top:2rem;padding-bottom:2rem}
+  .hero-grid{grid-template-columns:1fr;padding-top:1.8rem;padding-bottom:2rem;text-align:center}
   .hero-art{display:none}
-  .hero-copy h1{font-size:1.85rem}
+  .hero-badge{font-size:.8rem;line-height:1.4;border-radius:14px}
+  .hero-copy h1{font-size:1.7rem}
+  .hero-copy p.lead{margin:0 auto;font-size:1rem}
+  .cta-group{flex-direction:column;align-items:stretch;margin-top:1.4rem}
+  .cta-group .btn-main{width:100%;padding:15px}
+  .cta-group #btn-zalo,.cta-group #btn-call{display:none}
+  .cta-more{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.1rem}
+  .cta-more>span{grid-column:1/-1;text-align:center}
+  .cta-more .btn{padding:10px 6px;font-size:.85rem;border-radius:10px}
+  .hide-m{display:none!important}
+
   .section-title{font-size:1.55rem}
-  .trust-inner{grid-template-columns:1fr 1fr;padding:1.2rem 1rem}
-  .trust .disclaimer{padding:.8rem 1rem 1.1rem}
+  .trust-inner{grid-template-columns:1fr 1fr;gap:.9rem .8rem;padding:1.1rem 1rem}
+  .trust-item{font-size:0;align-items:center;gap:8px}
+  .trust-item strong{font-size:.86rem;line-height:1.35}
+  .trust .disclaimer{padding:.8rem 1rem 1.1rem;font-size:.85rem}
   .grid-2,.grid-3,#tieu-chi .grid-3{grid-template-columns:1fr}
   #quy-trinh .grid-3{gap:2.2rem}
   .contact-form{padding:1.4rem}
-  body{padding-bottom:68px}
-  .sticky-cta{left:0;right:0;bottom:0;flex-direction:row;gap:8px;padding:8px 10px;background:#fff;box-shadow:0 -4px 16px rgba(15,37,55,.14)}
-  .sticky-cta a{flex:1;border-radius:8px;box-shadow:none;padding:12px 8px}
+
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+  .sticky-cta{left:0;right:0;bottom:0;flex-direction:row;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:#fff;box-shadow:0 -4px 16px rgba(15,37,55,.14)}
+  .sticky-cta a{flex:1;border-radius:10px;box-shadow:none;padding:13px 8px}
 }
-@media(max-width:520px){.trust-inner{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
