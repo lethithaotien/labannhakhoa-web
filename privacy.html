@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách bảo mật - La Bàn Nha Khoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0E4B57;
+    --deep-2:#0A3841;
+    --mint:#E4F1EF;
+    --paper:#FAFCFB;
+    --ink:#1B2A2F;
+    --muted:#5A6B70;
+    --brass:#B88A3C;
+    --line:#D5E2E0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:1rem;line-height:1.7}
+  h1,h2,h3{font-family:Lora,Georgia,"Times New Roman",serif;font-weight:600;line-height:1.25;margin:0}
+  a{color:var(--deep)}
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:4px}
+
+  /* Đầu trang */
+  .hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+  .hero-inner{max-width:1040px;margin:auto;padding:3.5rem 1.5rem 4.5rem;position:relative}
+  .brand{font-weight:500;font-size:.95rem;opacity:.85;margin:0 0 2rem}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3rem);max-width:15em}
+  .hero p.lead{max-width:34rem;margin:1.25rem 0 0;font-size:1.08rem;color:#CFE4E1}
+  .compass{position:absolute;right:-60px;top:50%;width:380px;height:380px;transform:translateY(-50%);opacity:.14;pointer-events:none}
+
+  /* Cam kết */
+  .pledge{max-width:1040px;margin:-2.5rem auto 0;padding:0 1.5rem;position:relative}
+  .pledge-box{background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 12px 32px rgba(14,75,87,.10);padding:2rem 2rem 1.75rem;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+  .pledge-box h2{grid-column:1/-1;font-size:1.3rem;color:var(--deep)}
+  .pledge-item{border-top:3px solid var(--brass);padding-top:.9rem}
+  .pledge-item h3{font-size:1.02rem;margin-bottom:.4rem;color:var(--deep-2)}
+  .pledge-item p{margin:0;font-size:.95rem;color:var(--muted)}
+
+  /* Nội dung */
+  .layout{max-width:1040px;margin:3.5rem auto 0;padding:0 1.5rem;display:grid;grid-template-columns:220px 1fr;gap:3.5rem}
+  nav.toc{position:sticky;top:1.5rem;align-self:start;font-size:.92rem}
+  nav.toc p{margin:0 0 .6rem;font-weight:600;color:var(--deep)}
+  nav.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+  nav.toc a{display:block;padding:.35rem 0 .35rem .9rem;margin-left:-2px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+  nav.toc a:hover{color:var(--deep);border-left-color:var(--brass)}
+  article{max-width:40rem}
+  section{padding-bottom:1.9rem;margin-bottom:1.9rem;border-bottom:1px solid var(--line)}
+  section h2{font-size:1.28rem;color:var(--deep);margin-bottom:.6rem}
+  section p{margin:0}
+  section .num{color:var(--brass);margin-right:.4rem}
+  .contact{list-style:none;margin:.9rem 0 0;padding:1rem 1.2rem;background:var(--mint);border-radius:10px}
+  .contact li+li{margin-top:.35rem}
+  .contact strong{font-weight:600}
+
+  /* Lời cảm ơn */
+  .thanks{max-width:1040px;margin:1rem auto 0;padding:0 1.5rem}
+  .thanks-box{background:var(--deep);color:#fff;border-radius:14px;padding:2rem 2.25rem}
+  .thanks-box h2{font-size:1.35rem;margin-bottom:.5rem}
+  .thanks-box p{margin:0;max-width:36rem;color:#CFE4E1}
+
+  /* Chân trang */
+  footer{max-width:1040px;margin:2.5rem auto 0;padding:1.5rem 1.5rem 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+  footer strong{color:var(--ink);font-weight:600}
+  footer p{margin:.2rem 0}
+
+  @media (max-width:860px){
+    .pledge-box{grid-template-columns:1fr;padding:1.5rem}
+    .layout{grid-template-columns:1fr;gap:1.5rem}
+    nav.toc{display:none}
+    .compass{width:260px;height:260px;right:-70px;top:30%}
+    .hero-inner{padding:2.5rem 1.25rem 4rem}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="compass" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true">
+    <circle cx="100" cy="100" r="92"/>
+    <circle cx="100" cy="100" r="76"/>
+    <path d="M100 8v28M100 164v28M8 100h28M164 100h28" stroke-width="3"/>
+    <path d="M100 38l16 46 46 16-46 16-16 46-16-46-46-16 46-16z" fill="#fff" fill-opacity=".25"/>
+  </svg>
+  <div class="hero-inner">
+    <p class="brand">La Bàn Nha Khoa</p>
+    <h1>Thông tin của bạn chỉ dùng để tư vấn cho chính bạn</h1>
+    <p class="lead">Chúng tôi trân trọng sự tin tưởng khi bạn để lại thông tin. Dưới đây là những điều chúng tôi cam kết, được viết ngắn gọn và rõ ràng.</p>
+  </div>
+</header>
+
+<div class="pledge">
+  <div class="pledge-box">
+    <h2>Cam kết của chúng tôi</h2>
+    <div class="pledge-item">
+      <h3>Chỉ để tư vấn</h3>
+      <p>Thông tin bạn gửi chỉ dùng để liên hệ, trao đổi và tư vấn đúng theo nhu cầu bạn đã đăng ký.</p>
+    </div>
+    <div class="pledge-item">
+      <h3>Không dùng cho mục đích thương mại khác</h3>
+      <p>Không bán, cho thuê, trao đổi hay chia sẻ cho bên thứ ba để quảng cáo hoặc tiếp thị.</p>
+    </div>
+    <div class="pledge-item">
+      <h3>Bạn luôn là người quyết định</h3>
+      <p>Bạn có thể xem lại, chỉnh sửa hoặc yêu cầu xóa thông tin đã cung cấp bất cứ lúc nào.</p>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc" aria-label="Mục lục">
+    <p>Nội dung chính sách</p>
+    <ol>
+      <li><a href="#s1">Mục đích thu thập thông tin</a></li>
+      <li><a href="#s2">Cam kết về phạm vi sử dụng</a></li>
+      <li><a href="#s3">Trường hợp chia sẻ thông tin</a></li>
+      <li><a href="#s4">Lưu trữ và bảo mật</a></li>
+      <li><a href="#s5">Quyền của bạn</a></li>
+      <li><a href="#s6">Thay đổi chính sách</a></li>
+      <li><a href="#s7">Thông tin liên hệ</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section id="s1">
+      <h2><span class="num">1.</span>Mục đích thu thập thông tin</h2>
+      <p>Khi bạn để lại thông tin (họ tên, số điện thoại, nhu cầu thăm khám…), chúng tôi chỉ sử dụng để liên hệ, trao đổi và tư vấn đúng theo nhu cầu bạn đã đăng ký.</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">2.</span>Cam kết về phạm vi sử dụng</h2>
+      <p>Chúng tôi cam kết không sử dụng thông tin của bạn vào bất kỳ mục đích thương mại nào khác. Thông tin của bạn không được dùng để bán, cho thuê, trao đổi hay chia sẻ cho bên thứ ba nhằm quảng cáo hoặc tiếp thị.</p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">3.</span>Trường hợp chia sẻ thông tin</h2>
+      <p>Chúng tôi chỉ cung cấp thông tin khi có yêu cầu của cơ quan nhà nước có thẩm quyền theo quy định của pháp luật, hoặc khi được chính bạn đồng ý.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">4.</span>Lưu trữ và bảo mật</h2>
+      <p>Thông tin của bạn được lưu giữ cẩn thận và chỉ những nhân sự trực tiếp tư vấn mới được tiếp cận. Chúng tôi áp dụng các biện pháp phù hợp để tránh thất thoát, truy cập trái phép hoặc sử dụng sai mục đích.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">5.</span>Quyền của bạn</h2>
+      <p>Bạn có thể liên hệ với chúng tôi bất cứ lúc nào để xem lại, chỉnh sửa hoặc yêu cầu xóa thông tin đã cung cấp. Chúng tôi sẽ xử lý yêu cầu của bạn trong thời gian sớm nhất.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">6.</span>Thay đổi chính sách</h2>
+      <p>Khi có điều chỉnh về chính sách bảo mật, chúng tôi sẽ cập nhật ngay trên trang này để bạn nắm rõ.</p>
+    </section>
+
+    <section id="s7" style="border-bottom:0;margin-bottom:0;padding-bottom:0">
+      <h2><span class="num">7.</span>Thông tin liên hệ</h2>
+      <p>Nếu có bất kỳ thắc mắc nào về chính sách bảo mật, vui lòng liên hệ:</p>
+      <ul class="contact">
+        <li><strong>Điện thoại:</strong> <a href="tel:0902555556">0902 555 556</a></li>
+        <li><strong>Địa chỉ:</strong> 30 An Thượng 17, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng</li>
+      </ul>
+    </section>
+  </article>
+</div>
+
+<div class="thanks">
+  <div class="thanks-box">
+    <h2>Cảm ơn bạn đã tin tưởng chúng tôi</h2>
+    <p>Chúng tôi sẽ luôn nỗ lực để không phụ lòng tin của bạn.</p>
+  </div>
+</div>
+
+<footer>
+  <p><strong>CÔNG TY TNHH MỘT THÀNH VIÊN NHA KHOA THẨM MỸ ĐÀ NẴNG</strong></p>
+  <p>Mã số doanh nghiệp: 0401546163</p>
+  <p>Địa chỉ: 30 An Thượng 17, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng</p>
+</footer>
+
+</body>
+</html>
